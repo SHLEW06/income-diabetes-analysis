@@ -1,0 +1,17 @@
+# Large derived data
+combined_analytic_2018-2025.csv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Office temp files
+~$*
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
