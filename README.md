@@ -3,7 +3,8 @@
 A county-level analysis of the relationship between median household income and diabetes prevalence across the United States (2018-2025), controlling for educational attainment and food environment quality.
 
 [Read the rendered analysis](ECON%20220%20Final%20Report%20%281%29.html) |
-[Open the notebook](analysis.ipynb)
+[Open the notebook](analysis.ipynb) |
+[Run the core analysis](scripts/run_core_analysis.py)
 
 ## Results at a glance
 
@@ -32,9 +33,15 @@ This project investigates whether economic disadvantage predicts higher diabetes
 
 ```
 .
-├── analysis.ipynb                     # Main analysis notebook
-├── analytic_data{2018-2025}.csv       # Annual county-level datasets from CHR
-├── DataDictionary_{2018-2025}.xlsx    # Variable definitions for each year
+├── scripts/
+│   └── run_core_analysis.py           # Reproduces correlations and controlled models
+├── analysis.ipynb                     # Full analysis notebook and figures
+├── ECON 220 Final Report (1).html     # Rendered notebook
+├── assets/                            # README figure
+├── analytic_data{2018-2025}.csv       # Annual county-level CHR datasets
+├── DataDictionary_{2018-2025}.xlsx    # Annual variable definitions
+├── requirements.txt
+├── .gitattributes                    # Marks rendered HTML as generated
 └── README.md
 ```
 
@@ -72,7 +79,21 @@ statsmodels
 Install with:
 
 ```bash
-pip install pandas numpy matplotlib seaborn scipy statsmodels
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+Run the reusable Python entry point to reproduce the annual correlations and controlled OLS estimates:
+
+```bash
+python scripts/run_core_analysis.py
+```
+
+Open the notebook when you want the complete narrative and visual analysis:
+
+```bash
+jupyter notebook analysis.ipynb
 ```
 
 ## Data Source
@@ -89,4 +110,4 @@ Economics and Human Health Joint Major, Emory University
 
 ## License
 
-This project uses publicly available data. The analysis code is available for educational and research purposes.
+The source datasets remain subject to the terms of their original publishers. No separate open-source license has been assigned to the analysis code.
