@@ -1,6 +1,21 @@
-# Does Income Inequality Predict Higher Diabetes Prevalence in U.S. Counties?
+# Does Higher Household Income Predict Lower Diabetes Prevalence in U.S. Counties?
 
 A county-level analysis of the relationship between median household income and diabetes prevalence across the United States (2018-2025), controlling for educational attainment and food environment quality.
+
+[Read the rendered analysis](ECON%20220%20Final%20Report%20%281%29.html) |
+[Open the notebook](analysis.ipynb)
+
+## Results at a glance
+
+| Coverage | Annual correlations | Adjusted income estimate | Controlled model |
+|---:|---:|---:|---:|
+| 8 years, 23,000+ county-years | r = -0.42 to -0.67 | -0.86pp diabetes per +$10,000 income | R² = 0.324 |
+
+![Diabetes prevalence and median household income across eight annual samples](assets/income-diabetes-by-year.png)
+
+*The negative relationship appears in every annual sample. The model describes
+county-level associations and does not establish that income changes cause
+changes in diabetes prevalence.*
 
 ## Overview
 
